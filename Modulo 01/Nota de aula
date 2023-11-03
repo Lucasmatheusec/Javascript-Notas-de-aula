@@ -13,3 +13,22 @@ console.log(list)
 console.log(fullName); //O ponto e virgula é opcional nesse caso
 
 let nomeExemplo = "Lucas"; let idade = 25 //Nesse caso é obrigatório por tem mais de um tipo de código
+
+
+
+
+ === Diferença entre sinais de igualdade. ===
+ /*
+
+= significa "recebe"
+== significa "igual" (verificação flexível)
+=== significa um "igual mais restrito ainda" ele bate não só os valores mas também os tipos (typeof) 
+
+*/
+
+=== Multi-condicionais (&& e ||)
+/*
+&& = é igual a "and"/"e" ex: if (idade >= 18 && idade < 60)
+|| = é igual a "ou"/"or" ex: if (idade >= 18 || idade < 60)
+
+*/
