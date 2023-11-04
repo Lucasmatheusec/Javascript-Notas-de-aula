@@ -32,3 +32,32 @@ let nomeExemplo = "Lucas"; let idade = 25 //Nesse caso é obrigatório por tem m
 || = é igual a "ou"/"or" ex: if (idade >= 18 || idade < 60)
 
 */
+
+  === Condicional Ternário ==
+    (um if de uma linha só)
+
+let shipping = isMember ? 2 : 10;
+    // Depois do igual vem o teste lógico(isMember), se for verdadeiro faz o que vem depois de "?", se for falso faz o que vir depois de ":"
+
+console.log(isMember ? "Você é membro" : "Você não é membro")
+
+  === Switch ==
+let profession = "policial"
+
+switch(profession) {
+    case 'fiscal':
+        console.log("Uniforme Verde")
+        break;
+    case 'policial':
+        console.log("Uniforme Azul")
+        break;
+    case 'bombeiro':
+        console.log("Uniforme Vermelho")
+        break;
+    default:
+    console.log("Valor padrão caso nenhum dos outros seja chamado")
+}
+// Switch pega o valor do teste desafio e compara com os "case" se os valores baterem(Se for true) ela faz o que está listado logo após o ":"
+- !!Importante coloca o break, senão ela passa para o outro "case"!! -
+
+default: -> case padrão caso nenhuma das outras seja escolhida, geralmente é colocada ao final. Também é dispensável... coloca se quiser
