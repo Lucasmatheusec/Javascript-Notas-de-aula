@@ -1,0 +1,22 @@
+== Estudos sobre Funções == 
+-  A função primária dos dados seria // Entrada -> Processamento -> Saída.
+
+function nomeDaFunção() {
+    escopo padrão das funções.
+    Aqui vai o conteúdo a ser executado.
+    Não acontece nada enquanto a função não for chamada.
+}
+nomeDaFunção();         //chamando a função
+
+#Exemplo 02:
+function nomeCompleto(nome, sobrenome) {
+    As variáveis declaradas acima só funcionam aqui dentro, 
+    os valores delas são undefined enquanto eu não designar um valor.
+    
+    return `${nome} ${sobrenome}`;      //Return é a ultima etapa da
+                                        //Function, ou seja a função para quando chega nela, tudo que vem após será ignorado.
+}
+let completo = nomeCompleto('Lucas', 'Matheus');
+console.log('Nome completo: ' + completo)
+
+// O return emprega o valor que será usado pela variável completo.
