@@ -86,8 +86,16 @@ function addsquares(a, b) {
     return sqrA + sqrB;
 }
 console.log(addsquares(3, 4));
-*/
+
 
 // === Array ===
 let colors = ['Red', 'Green', "Blue"]
 console.log(colors)
+*/
+let ingredientes = [
+    'Agua',
+    'leite',
+    'ovos',
+    'trigo',
+    'fermento',
+];
