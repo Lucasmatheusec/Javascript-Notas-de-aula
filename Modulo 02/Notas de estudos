@@ -20,3 +20,33 @@ let completo = nomeCompleto('Lucas', 'Matheus');
 console.log('Nome completo: ' + completo)
 
 // O return emprega o valor que será usado pela variável completo.
+
+ === Arrow Function ===
+ Forma diferente de definir uma função.
+
+ const somar = (x, y) => {      //Sintaxe da arrow () => {}
+    return x + y;               //não precisa colocar function
+    //ideal é usar assim quando
+    //se tem mais de uma linha
+    //de código.
+}                               //Já entra na constante.
+console.log(somar(10, 5))
+
+const soma = (x, y) => x + y;  //mesmo jeito de dizer o que está acima
+// # Detalhe! não pode colocar {}, no caso se colocar o uso do return é obrigátório.
+
+=== Variáveis dentro de funções ===
+
+let count = 0;          //Como essa variável foi criada fora da      
+                        //function, ela vai ser aproveitada lá dentro
+
+function add() {
+    count++;            //Do contrário não é possível, a variável
+                        // tem escopo de bloco.
+}
+
+ === === Array === === Importante.
+
+ let colors = ["Blue", 'Red', 'Green']
+ Sempre separando os itens por vírgula.
+ A contagem começa do zero

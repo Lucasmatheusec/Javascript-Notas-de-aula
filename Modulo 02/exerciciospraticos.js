@@ -49,7 +49,7 @@ let metragem = 10 * 20;
 let quartos = 3;
 let preco = calcularImovel(metragem, quartos);
 console.log(`A casa custa ${preco}`)
-*/
+
 
 function validar(usuario, senha) {
   if (usuario === 'pedro' && senha === 123) {
@@ -67,3 +67,27 @@ if (validacao) {
 } else {
     console.log('Acesso Negado!')
 }
+
+
+// Arrow Function
+
+const somar = (x, y) => {
+    return x + y;
+}
+console.log(somar(10, 5))
+
+
+// função dentro de função
+function addsquares(a, b) {
+    const square = (x) => x * x;
+
+    let sqrA = square(a);
+    let sqrB = square(b);
+    return sqrA + sqrB;
+}
+console.log(addsquares(3, 4));
+*/
+
+// === Array ===
+let colors = ['Red', 'Green', "Blue"]
+console.log(colors)
