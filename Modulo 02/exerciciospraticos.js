@@ -99,3 +99,4 @@ let ingredientes = [
     'trigo',
     'fermento',
 ];
+console.log(`Total de ingredientes ${ingredientes.length}`)

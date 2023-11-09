@@ -50,3 +50,6 @@ function add() {
  let colors = ["Blue", 'Red', 'Green']
  Sempre separando os itens por vírgula.
  A contagem começa do zero
+
+ .length = total de elementos em um array.
+ 
