@@ -157,7 +157,7 @@ let avatar = {
 }
 avatar.carros[1].modelo
 console.log(avatar.carros[0].modelo)
-*/
+
 let avatar = {
     name: 'lucas',
     lastName: 'Matheus',
@@ -172,3 +172,31 @@ console.log(avatar.nameComplete()); //Chamando a função como se fosse global.
  
 //Atenção! nunca usar uma function anônima dentro do objeto porque ela perde o 'this'.
 //  () => {}    Função anônima.
+
+//   === loop For === 
+
+ for (let n = 0; n < 10; n++) {
+    console.log(n);
+ }
+*/
+let cores = [
+    {nome: 'preto', qt: 10},
+    {nome:'azul', qt: 5},
+    {nome:'vermelho', qt: 25},
+];
+cores.push('green');
+
+
+for (let n = 0; n < cores.length; n++) {
+    console.log(cores[n]);
+}
+
+for (let i in cores) {
+    cores[i].nome = cores[i].nome.toUpperCase();
+    console.log(cores)
+}
+
+for (let cor of cores) {
+    console.log(`Nome: ${cor.nome} - ${cor.qt}`) // Assim que acesso o nome do objeto
+                          // Dentro do Array
+}
