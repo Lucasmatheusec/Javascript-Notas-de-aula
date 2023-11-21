@@ -53,3 +53,27 @@ function add() {
 
  .length = total de elementos em um array.
  
+variável.pop(); // Para remover o ultimo item do array
+Variável.shift(); //Para remover o primeiro item do array.
+
+=== Objetos ===
+let nome = 'lucas';
+let nomes = ['lucas', 'Samara'];        //Array tem elementos
+let personagem = {                      //Objetos tem Propriedade.
+    nome: 'lucas',
+    idade: 90,
+    pais: 'Brasil',
+    caracteristicas: {
+        forca: 5,
+        magia: 10,
+        stamina: 3,
+        belezura: 100,
+    },
+    olhos: ['Preto', 'Azul'],
+}
+console.log(personagem.nome) //Para chamar a propriedade do objeto
+console.log(personagem.nome);
+console.log(`O personagem ${personagem.nome} tem ${personagem.idade} anos e mora no ${personagem.pais}.`);
+
+console.log(personagem.caracteristicas.belezura);
+console.log(personagem.olhos[1]);
