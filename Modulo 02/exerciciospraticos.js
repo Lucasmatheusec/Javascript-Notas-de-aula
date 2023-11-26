@@ -1,6 +1,6 @@
 /*
 function gravidade() {              //Criando a function.
-    console.log("A gravidade do planeta é:");
+    console.log("A gravidade do planeta é: ");
     console.log(9.8);
 }
 
@@ -178,7 +178,7 @@ console.log(avatar.nameComplete()); //Chamando a função como se fosse global.
  for (let n = 0; n < 10; n++) {
     console.log(n);
  }
-*/
+
 let cores = [
     {nome: 'preto', qt: 10},
     {nome:'azul', qt: 5},
@@ -199,4 +199,10 @@ for (let i in cores) {
 for (let cor of cores) {
     console.log(`Nome: ${cor.nome} - ${cor.qt}`) // Assim que acesso o nome do objeto
                           // Dentro do Array
+}
+*/
+let cores = ['preto', 'branco', 'azul', 'vermelho'];
+
+for (let n = 0; n < cores.length; n++) {
+    console.log(`cor: ${n}`)
 }

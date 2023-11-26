@@ -33,7 +33,7 @@ console.log('Nome completo: ' + completo)
 console.log(somar(10, 5))
 
 const soma = (x, y) => x + y;  //mesmo jeito de dizer o que está acima
-// # Detalhe! não pode colocar {}, no caso se colocar o uso do return é obrigátório.
+// # Detalhe! não pode colocar {}, no caso se colocar o uso do return é obrigatório.
 
 === Variáveis dentro de funções ===
 
