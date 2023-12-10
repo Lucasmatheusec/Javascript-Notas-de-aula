@@ -200,9 +200,57 @@ for (let cor of cores) {
     console.log(`Nome: ${cor.nome} - ${cor.qt}`) // Assim que acesso o nome do objeto
                           // Dentro do Array
 }
-*/
+
 let cores = ['preto', 'branco', 'azul', 'vermelho'];
 
 for (let n = 0; n < cores.length; n++) {
     console.log(`cor: ${n}`)
 }
+
+ === while ===
+let numero = 0;
+
+while (numero < 10) {
+    console.log(`O número da vez é: ${numero}`)
+    numero++
+}
+ 
+//Pode ser escrito dessa forma.
+for(let numero = 0; numero < 10; numero++){
+    console.log(`O número da vez é: ${numero}`)
+}
+
+let fruits = ['Maçã', 'Uva', 'Banana'];
+for (let x in fruits) {
+    console.log(`A fruta da vez é: ${fruits[x]}`)
+}
+
+let numero = 1;
+while (numero < 101) {
+    console.log(numero);
+    numero++
+}
+*/
+let fruits = ['Maçã', 'Uva', 'Laranja', 'Banana'];
+
+fruits.sort();      //Vai colocar em ordem alfabética.
+fruits.reverse();
+
+console.log(fruits) 
+
+let cars = [ 
+    {brand: 'fiat', year: 2022},
+    {brand: 'Ferrari', year: 2020},
+    {brand: 'BMW', year: 2018},
+]
+
+cars.sort((a, b) => {
+    if (a.year > b.year) {
+        return 1;
+    } else if (a.year < b.year){
+        return -1;
+    } else {
+        return 0;
+    }
+})
+console.log(cars)
