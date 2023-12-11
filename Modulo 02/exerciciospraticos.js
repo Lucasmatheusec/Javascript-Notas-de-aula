@@ -230,7 +230,7 @@ while (numero < 101) {
     console.log(numero);
     numero++
 }
-*/
+
 let fruits = ['Maçã', 'Uva', 'Laranja', 'Banana'];
 
 fruits.sort();      //Vai colocar em ordem alfabética.
@@ -254,3 +254,33 @@ cars.sort((a, b) => {
     }
 })
 console.log(cars)
+*/
+
+let fruits = ['Maçã', 'Laranja', 'Banana', 'Pêra', 'Uva'];
+
+ let bigFruits = fruits.filter(                 //A função filter gera um novo array, tem que criar variável.
+    (item) => item.length > 4
+//    (item) => {
+//        if(item.length > 4){
+//            return true;
+//        }
+//    }
+)
+
+console.log(bigFruits)
+
+let ok = fruits.every((value) => {      // Every = Todos / Some = Algum
+    return value.length > 3;
+})
+
+if (ok) {
+    console.log("Todos são maior que 3")
+} else {
+    console.log('Não são todos maior que 3')
+}
+
+if (fruits.includes('Uva')) {
+    console.log('tem Uva sim!')
+} else {
+    console.log('Não tem uva')
+}
