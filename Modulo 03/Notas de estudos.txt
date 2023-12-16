@@ -1,0 +1,166 @@
+=== DOM === Document Object Model
+
+Selecionando elementos.
+
+document.getElementById('id do elemento')
+document.getElementsByClassName('classe do elemento')
+document.querySelector('#text') - pelo id
+document.querySelector('.text') - pela class
+document.querySelector('h1') - a primeira tag
+document.querySelectorAll('h1') - Todo os h1
+document.querySelectorAll("#teste ul li") - Navegando por tag
+
+obs: querySelector - Retorna o elemento específico
+     querySelectorAll - Retorna um Array com todo os elementos dentro, mesmo que seja apenas um.
+
+
+ === Eventos de Click. ===
+
+Coloque onclick="Nome da function()" na button(HTML)
+em seguinda faça a function nome da function() {};
+
+ ou 
+
+no javascript coloque
+let botao = document.querySelector('.botao');
+botao.addEventListener("click", clicou);
+ - Quando der o clique ele retornará "clicou"
+ botao.addEventListener("click", Função que vai executar);
+    Ex:
+botao.addEventListener("click", Function() {
+    clicou();
+});
+botao.addEventListener("click", () => {
+    clicou();
+});
+
+
+=== Manipulando Elementos ===
+
+.innerHTML = "<strong> oi </strong>" - Inner = interno... no caso eu mando um comando para um html interno.
+
+.innerText = "Apenas texto" - Manda o texto, se usar uma tag aqui ela vai ser lida como string pelo html, não como código.
+
+.outerHTMl = "texto ou tag" - vai trocar o que foi selecionado com o que está em parênteses.
+    Ex: ul.outerHTMl = "<strong> oi </strong>" -  vai trocar a tag ul e o que estiver dentro por "<strong> oi </strong>", é muito pouco utilizado.
+
+    Ex: ul.children[0].append("Alterado")
+.append vai adicionar "Alterado" ao que já estava em ul. Se usar uma tag aqui ela vai ser lida como string pelo html
+
+* Para adicionar uma li a um ul por exemplo, se faria assim:
+let newLi = document.createElement("li");
+newLi.innerText = "item adicionado";
+
+ul.appendChild(newLi);
+
+    - Eu criei uma variável coloquei um elemento dentro dela(li) em seguida adicionei o texto de li e usei append para adicionar a variável li, já com o texto, dentro de ul pelo .appendChild()
+
+* Para adicionar ao começo
+    ul.prepend(nomeDaVariável)
+Mesmo princípio que o anterior
+
+* Para adicionar antes/depois da tag especificada.
+ul.after("O que vai ser colocado DEPOIS da tag ul")
+ul.before("O que vai ser colocado ANTES da tag ul")
+    Assim seria colocado apenas o texto.
+
+const newButton = document.createElement('button');
+newButton.innerHTMl = "Botão";
+
+ul.before(newButton);
+    - Fazendo desse jeito se adiciona uma tag botão e um texto "Botão" a ele. em seguida adicionaria antes de ul.
+    ou/
+
+ul.after(newButton);
+    - Para adicionar depois do ul.
+
+
+
+=== Manipulando Atributos === 
+
+console.log(input.getAttribute('placeholder'));
+    - Pegando a tag input e pegando o atributo placeholder, ainda usando aspas, podemos ver no console log o valor do placeholder.
+    - Atributo seria aquilo que fica dentro da tag html Ex: <input type="text" placeholder="Digita aí o que quiser" name="algo" class="input">
+
+* Para saber se tem ou não atributo usa-se o .hasAttribute, que retornará um valor boolean(V/F)
+if (input.hasAttribute('placeholder')) {
+    console.log('Tem placeholder SIM');
+} else {
+    console.log('não tem placeholder...');
+}
+
+* Para adicionar atributos usa-se o .setAttribute
+input.setAttribute('placeholder', 'Placeholder alterado')
+    - Aqui na primeira aspa será colocado o atributo que queremos selecionar e na segunda aspa, separado por vírgula, será adicionado o valor do atributo.
+
+* Função básica explicando como seria aquele botão de mostrar e ocultar senha.
+function clicou() {
+    const input = document.querySelector('input');
+    if (input.getAttribute('type') == 'text'){
+        input.setAttribute('type', 'password');
+    } else {
+        input.setAttribute('type', 'text');
+    }
+} 
+
+
+
+=== Manipulando CSS ===
+* Sempre que precisar modificar o CSS INLINE(aquele de fica como se fosse um atributo), inclusive podendo até adicionar configurações, se faz o seguinte.
+
+const h1 = document.querySelector('h1');
+    h1.style.backgroundColor = 'blue';
+    h1.style.fontSize = '3em';
+
+    - Eu chamo a tag e jogo em uma constante, em seguida posso configurar essa constante como bem entender, todo os elementos de CSS funcionam, porém, todos eles serão inline, uso o código ".style.fontSize" por exemplo, usar sempre da forma como está descrita, sem "-", e o value dela deve estar entre parêntese.
+    Obs!: mesmo se o atributo não tiver style inline, a manipulação ainda funciona.
+
+
+
+=== Trabalhando com classes ===
+* Consigo pegar as classes do meu elemento usando o button.classList
+
+function clicou(){
+    const button = document.querySelector('button');
+    console.log(button.classList)
+}
+
+* Para remover e adicionar classes aos elementos.
+    button.classList.remove('nomeDaClasse');
+    button.classList.add('nomeDaClasse')
+
+    - Para fazer os dois alternadamente usa-se o toggle.
+    button.classList.toggle('nomeDaClasse')
+    - ele vai remover se tiver a classe, se não tiver ele vai adicionar.
+
+* Para saber se tem a classe.
+    button.classList.contains('nomeDaClasse')
+    - Vai verificar se há o item e retornar um boolean(V/F).
+
+* Para trocar as classes.
+    button.classList.replace('nomeDaClasseAntiga', 'nomeDaClasseNova');
+
+
+
+=== Eventos de teclado ===
+* Adiciona os atributos onkeydown(apertar), onkeypress(segurar), onkeyup(soltar)
+
+function apertou() {
+    console.log('Apertou!');
+}
+function segurou() {
+    console.log('Segurou!');
+}
+function soltou() {
+    console.log('Soltou!');
+}
+    - Aqui toda vez que qualquer tecla for apertada ele retorna as 3 funções.
+    - Apertar e segurar são ações que se repetem muito, logo é usado o soltar(onkeyup) visto que só pode acontecer uma vez.
+
+* Para adicionar eventos.
+    const input = document.querySelector('input');
+    input.addEventListener('keyup', soltou)
+    - Aqui eu uso o .addEventListener seguido do código da ação, pode ser 'click', 'keyup', 'keydown'... após a virgula é a function que eu quero reproduzir toda vez que o evento(click, keyup, keypress) for acionado, sem colocar os parênteses.
+
+    documento.addEventListener('click', variavelDaFunction);
+    - Para adicionar o evento de tecla à página toda (documento todo)
